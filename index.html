@@ -3,42 +3,102 @@
   <head>
     <meta charset="UTF-8">
     <title>Exercise 6: Banh Mi, menus, and layout</title>
-    
- <!-- These are the embed codes for the two google fonts in our document, we will learn about google fonts next week -->
+
+    <!-- These are the embed codes for the two google fonts in our document, we will learn about google fonts next week -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Ledger&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Ledger&display=swap" rel="stylesheet">
+
     <style>
+      * {
+        box-sizing: border-box;
+      }
 
       body {
-      font-family: "Ledger", serif;
-      font-weight: 400;
-      font-style: normal;  
+        font-family: "Ledger", serif;
+        font-weight: 400;
+        font-style: normal;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #001628;
       }
-      
-      h1 , h2 , ul {
-      font-family: "Inter Tight", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
+
+      h1, h2, ul {
+        font-family: "Inter Tight", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
       }
-      
+
       h1 {
-      font-weight: 600;
+        font-weight: 600;
+        color: #FFFFFF;
+        text-align: center;
       }
-      
+
       h2 {
-      font-weight: 500;
+        font-weight: 500;
+        margin-top: 15px;
+        color: #001628;
       }
-      
+
       ul {
-      font-weight: 700;
+        font-weight: 700;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 20px;
       }
       
+      li a {
+        text-decoration: none;
+        color: #99D9D9;
+      }
+
+      li a:hover {
+        color: #E31837;
+      }
+      
+      .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 20px;
+      }
+
+      .container div {
+        background-color: #EAF7F7;
+        padding: 15px;
+        color: #333333;
+        text-align: center;
+      }
+
+      .container img {
+        width: 100%;
+        display: block;
+      }
+      
+      p {
+        line-height: 25px;
+        font-size: 15px;
+      }
+      
+      footer {
+        margin: 20px auto 0 auto;
+        max-width: 800px;
+        text-align: center;
+        background-color: #99D9D9;
+        color: #001628;
+        padding: 10px 15px;
+      }
     </style>
   </head>
   <body>
@@ -53,18 +113,32 @@
     </ul>
 
     <h1>At Greg’s Banh Mi, we’re serving up the perfect marriage of French and Vietnamese culinary traditions&mdash;crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavours that'll make your taste buds sing.</h1>
+    
+    <div class="container">
+      <div>
+        <img src="banh-mi.jpg" alt="Classic Pork Banh Mi">
+        <h2>Classic Pork Banh Mi</h2>
+        <p>Tender marinated pork topped with crisp pickled vegetables, fresh cilantro, and a smear of p&acirc;t&eacute; on a perfectly crusty baguette. A traditional favorite that balances savory, sweet, and tangy flavors in every bite.</p>
+      </div>
 
-    <h2>Classic Pork Banh Mi</h2>
-    <p>Tender marinated pork topped with crisp pickled vegetables, fresh cilantro, and a smear of p&acirc;t&eacute; on a perfectly crusty baguette. A traditional favorite that balances savory, sweet, and tangy flavors in every bite.</p>
+      <div>
+        <img src="banh-mi.jpg" alt="Lemongrass Chicken Banh Mi">
+        <h2>Lemongrass Chicken Banh Mi</h2>
+        <p>Grilled chicken marinated in fragrant lemongrass and garlic, paired with cucumber, jalape&ntilde;os, and our house mayo. Light yet satisfying, this sandwich brings bright, aromatic flavors that'll transport you straight to Saigon.</p>
+      </div>
 
-    <h2>Lemongrass Chicken Banh Mi</h2>
-    <p>Grilled chicken marinated in fragrant lemongrass and garlic, paired with cucumber, jalape&ntilde;os, and our house mayo. Light yet satisfying, this sandwich brings bright, aromatic flavors that'll transport you straight to Saigon.</p>
+      <div>
+        <img src="banh-mi.jpg" alt="Tofu Banh Mi">
+        <h2>Tofu Banh Mi</h2>
+        <p>Crispy pan-fried tofu glazed in sweet soy sauce, layered with daikon, carrots, and fresh herbs for a vegetarian delight. Proof that plant-based can be just as bold and craveable as any meat-filled sandwich.</p>
+      </div>
 
-    <h2>Tofu Banh Mi</h2>
-    <p>Crispy pan-fried tofu glazed in sweet soy sauce, layered with daikon, carrots, and fresh herbs for a vegetarian delight. Proof that plant-based can be just as bold and craveable as any meat-filled sandwich.</p>
-
-    <h2>Five-Spice Beef Banh Mi</h2>
-    <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
+      <div>
+        <img src="banh-mi.jpg" alt="Five-Spice Beef Banh Mi">
+        <h2>Five-Spice Beef Banh Mi</h2>
+        <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
+      </div>
+    </div>
 
     <footer>
       <p>Because life’s too short for boring sandwiches. Greg’s got you covered&mdash;one crispy baguette at a time.</p>
